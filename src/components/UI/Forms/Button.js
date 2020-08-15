@@ -1,10 +1,13 @@
 import React from 'react';
 
-export const Button = (type, btnColor, onClick, text) => (
+export const Button = ({
+  type, btnColor, onClick, text, btnSize
+}) => (
   <button
-    type={type}
-    className={`btn ${btnColor}`}
-    onClick={onClick}>
+      type={type}
+      className={`btn ${btnColor} ${btnSize}`}
+      onClick={onClick}
+    >
       {text}
     </button>
 );

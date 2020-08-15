@@ -1,5 +1,16 @@
 import React from 'react';
 
-export const Input = ( type, id, name ) => (
-  <input type={type} className="form-control" id={id} name={name} />
+export const Input = (
+  { type, id, name, labelText, placeholder, sizeInput }
+) => (
+  <div className="form-group">
+    {labelText && <label for={id}>{labelText}</label>}
+    <input 
+      type={type}
+      className={`form-control ${sizeInput}`}
+      id={id}
+      name={name}
+      placeholder={placeholder}
+    />
+  </div>
 );
